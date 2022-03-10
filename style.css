@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.form-container {
+  border: 1px solid;
+  margin: auto;
+  width: 50%;
+  height: 40%;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  padding-top: 20px;
+}
+
+.special {
+  color: #5858f0;
+}
+
+form {
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 5px 0px;
+}
+
+#book-form input {
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #aaaaaa;
+}
+
+#submit {
+  padding: 15px;
+  margin: 20px 0px;
+  border-radius: 30px;
+  background: rgb(198, 233, 219);
+  background: linear-gradient(
+    313deg,
+    rgba(198, 233, 219, 1) 20%,
+    rgba(44, 227, 99, 1) 52%,
+    rgba(175, 223, 233, 1) 83%
+  );
+}
+
+#submit:hover {
+  cursor: pointer;
+  box-shadow: 5px 10px 10px #aaaaaa;
+}
