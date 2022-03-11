@@ -16,6 +16,7 @@ function books(title, author, numberOfPages) {
   this.title = title;
   this.author = author;
   this.numberOfPages = numberOfPages;
+
   //   this.isBookRead = isBookRead;
 }
 function displayBooks() {
@@ -24,10 +25,20 @@ function displayBooks() {
 
 function addToBookList(book) {
   const displayList = document.querySelector(".list");
-  const ul = document.createElement("ul");
+  const card = document.createElement("div");
 
-  ul.innerHTML = `<li>${book.title}</li>`;
-  displayList.appendChild(ul);
+  card.innerHTML = `
+  <button class= "delete">X</button>
+  <h1>${book.title}</h1> <br>
+  <h2>${book.author}</h2><br>
+  <h2>${book.numberOfPages}</h2>`;
+  displayList.appendChild(card);
+}
+
+function removeBook(target) {
+  if (target.classList.contains("delete")) {
+    target.parentElement.remove();
+  }
 }
 
 const form = document.getElementById("book-form");
@@ -44,3 +55,7 @@ form.addEventListener("submit", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", displayBooks);
+
+document
+  .querySelector(".list")
+  .addEventListener("click", (e) => removeBook(e.target));
