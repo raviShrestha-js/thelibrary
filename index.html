@@ -13,13 +13,18 @@
       <h1>My<span class="special">Book</span>Library</h1>
       <form id="book-form">
         <label for="book-name">Book</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" required />
         <br />
         <label for="author">Author</label>
-        <input type="text" name="author" id="author" />
+        <input type="text" name="author" id="author" required />
         <br />
         <label for="number-of-pages">Number of Pages</label>
-        <input type="text" name="num" id="num" />
+        <input type="text" name="num" id="num" required />
+        <br />
+        <div class="checkbox">
+          <input type="checkbox" name="read" id="read" checked />
+          <label for="isBookRead"> Have You Read the Book?</label>
+        </div>
         <br />
         <button id="submit">Add</button>
       </form>

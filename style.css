@@ -33,7 +33,7 @@ label {
   margin: 5px 0px;
 }
 
-#book-form input {
+#book-form input[type="text"] {
   font-size: 1em;
   padding: 10px;
   border-radius: 10px;
@@ -67,7 +67,6 @@ label {
 .list div {
   border: 2px solid;
   padding: 20px;
-  text-align: center;
 }
 .delete {
   padding: 5px 10px;
@@ -75,6 +74,18 @@ label {
   color: white;
   position: relative;
   float: right;
+}
+
+.delete:hover {
+  cursor: pointer;
+}
+
+.success {
+  background-color: rgb(101, 240, 101);
+}
+
+.remove {
+  background-color: rgb(245, 59, 59);
 }
 
 @media (max-width: 450px) {
